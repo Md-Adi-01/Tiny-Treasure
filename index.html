@@ -12,17 +12,17 @@
 
     <nav>
         <div class="logo-area">
-            <img src="logo.png" alt="Tiny Treasures Logo" class="nav-logo">
+            <img src="logo.png" alt="Logo" class="nav-logo">
             <span class="brand-text">Tiny Treasures</span>
         </div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#products">Collection</a></li>
-            <li><a href="https://wa.me/8801341007011" target="_blank" class="wa-btn"><i class="fab fa-whatsapp"></i> Chat with Us</a></li>
-        </ul>
+        <div class="nav-actions">
+            <a href="https://wa.me/8801341007011" target="_blank" class="wa-btn">
+                <i class="fab fa-whatsapp"></i> <span class="wa-text">Chat</span>
+            </a>
+        </div>
     </nav>
 
-    <header id="home" class="hero">
+    <header class="hero">
         <div class="hero-text">
             <h1>Aesthetic Gifts to Brighten Your Day</h1>
             <p>Discover our curated collection of "Small Joys" that bring "Big Smiles".</p>
@@ -35,11 +35,11 @@
         <div class="grid">
             
             <div class="card">
-                <img src="keychain.jpg" alt="Aesthetic Keychain" class="prod-img">
+                <img src="keychain.jpg" alt="Keychain" class="prod-img">
                 <div class="card-info">
                     <h3>Aesthetic Keychain</h3>
                     <p class="price">৳ ১৪৯.০০</p>
-                    <button class="order-btn" onclick="sendOrder('Aesthetic Keychain')">Order on WhatsApp</button>
+                    <button class="order-btn" onclick="sendOrder('Aesthetic Keychain')">Order Now</button>
                 </div>
             </div>
 
@@ -49,16 +49,16 @@
                 <div class="card-info">
                     <h3>Panda Touch Lamp</h3>
                     <p class="price">৳ ৩৫০.০০</p>
-                    <button class="order-btn" onclick="sendOrder('Panda Touch Lamp')">Order on WhatsApp</button>
+                    <button class="order-btn" onclick="sendOrder('Panda Touch Lamp')">Order Now</button>
                 </div>
             </div>
 
             <div class="card">
-                <img src="https://via.placeholder.com/300x300?text=Gift+Box" alt="Gift Box" class="prod-img">
+                <img src="https://via.placeholder.com/300x300?text=Gift+Combo" alt="Combo" class="prod-img">
                 <div class="card-info">
                     <h3>Tiny Surprise Box</h3>
                     <p class="price">৳ ৮৫০.০০</p>
-                    <button class="order-btn" onclick="sendOrder('Tiny Surprise Box')">Order on WhatsApp</button>
+                    <button class="order-btn" onclick="sendOrder('Tiny Surprise Box')">Order Now</button>
                 </div>
             </div>
 
@@ -67,10 +67,10 @@
 
     <footer>
         <div class="footer-wrap">
-            <p>&copy; 2026 <strong>Tiny Treasures BD</strong>. All Rights Reserved.</p>
+            <p>&copy; 2026 <strong>Tiny Treasures BD</strong></p>
             <div class="social-icons">
-                <a href="https://www.facebook.com/share/1DbrFj4LXm/" target="_blank"><i class="fab fa-facebook"></i> Facebook Page</a>
-                <a href="https://wa.me/8801341007011" target="_blank"><i class="fab fa-whatsapp"></i> +880 1341-007011</a>
+                <a href="https://www.facebook.com/share/1DbrFj4LXm/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="https://wa.me/8801341007011" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
             </div>
         </div>
     </footer>
@@ -78,9 +78,8 @@
     <script>
         function sendOrder(item) {
             const phone = "8801341007011";
-            const msg = `Hello Tiny Treasures! I would like to order: ${item}. Could you please share more details?`;
-            const waUrl = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
-            window.open(waUrl, '_blank');
+            const msg = `Hello Tiny Treasures! I want to order: ${item}.`;
+            window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, '_blank');
         }
     </script>
 
