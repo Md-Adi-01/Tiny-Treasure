@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiny Treasures | Small Joys, Big Smiles</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo-area">
+            <img src="logo.png" alt="Tiny Treasures Logo" class="nav-logo">
+            <span class="brand-text">Tiny Treasures</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Collection</a></li>
+            <li><a href="https://wa.me/8801341007011" target="_blank" class="wa-btn"><i class="fab fa-whatsapp"></i> Chat with Us</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-text">
+            <h1>Aesthetic Gifts to Brighten Your Day</h1>
+            <p>Discover our curated collection of "Small Joys" that bring "Big Smiles".</p>
+            <a href="#products" class="btn-primary">Shop Now</a>
+        </div>
+    </header>
+
+    <section id="products" class="container">
+        <h2 class="title">Our Treasures ✨</h2>
+        <div class="grid">
+            
+            <div class="card">
+                <img src="keychain.jpg" alt="Aesthetic Keychain" class="prod-img">
+                <div class="card-info">
+                    <h3>Aesthetic Keychain</h3>
+                    <p class="price">৳ ১৪৯.০০</p>
+                    <button class="order-btn" onclick="sendOrder('Aesthetic Keychain')">Order on WhatsApp</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="badge">Hot</div>
+                <img src="panda-lamp.jpg" alt="Panda Lamp" class="prod-img">
+                <div class="card-info">
+                    <h3>Panda Touch Lamp</h3>
+                    <p class="price">৳ ৩৫০.০০</p>
+                    <button class="order-btn" onclick="sendOrder('Panda Touch Lamp')">Order on WhatsApp</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/300x300?text=Gift+Box" alt="Gift Box" class="prod-img">
+                <div class="card-info">
+                    <h3>Tiny Surprise Box</h3>
+                    <p class="price">৳ ৮৫০.০০</p>
+                    <button class="order-btn" onclick="sendOrder('Tiny Surprise Box')">Order on WhatsApp</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-wrap">
+            <p>&copy; 2026 <strong>Tiny Treasures BD</strong>. All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/share/1DbrFj4LXm/" target="_blank"><i class="fab fa-facebook"></i> Facebook Page</a>
+                <a href="https://wa.me/8801341007011" target="_blank"><i class="fab fa-whatsapp"></i> +880 1341-007011</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function sendOrder(item) {
+            const phone = "8801341007011";
+            const msg = `Hello Tiny Treasures! I would like to order: ${item}. Could you please share more details?`;
+            const waUrl = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
+            window.open(waUrl, '_blank');
+        }
+    </script>
+
+</body>
+</html>
