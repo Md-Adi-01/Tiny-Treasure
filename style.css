@@ -1,4 +1,3 @@
-/* Color Palette */
 :root {
     --pastel-pink: #fce4ec;
     --gold: #D4AF37;
@@ -15,17 +14,15 @@
 
 body {
     background-color: #fffafb;
-    color: var(--dark-text);
-    line-height: 1.6;
-    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
-/* Navbar Design */
+/* --- Navbar --- */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 10%;
+    padding: 10px 5%;
     background: var(--white);
     position: sticky;
     top: 0;
@@ -36,126 +33,97 @@ nav {
 .logo-area { display: flex; align-items: center; }
 
 .nav-logo {
-    height: 55px;
-    width: 55px;
+    height: 45px;
+    width: 45px;
     border-radius: 50%;
-    margin-right: 12px;
+    margin-right: 10px;
 }
 
 .brand-text {
     font-family: 'Dancing Script', cursive;
-    font-size: 26px;
+    font-size: 22px;
     color: var(--gold);
     font-weight: bold;
 }
-
-.nav-links { list-style: none; display: flex; align-items: center; }
-
-.nav-links li { margin-left: 25px; }
-
-.nav-links li a { text-decoration: none; color: var(--dark-text); font-weight: 500; }
 
 .wa-btn {
     background-color: #25D366;
     color: white !important;
     padding: 8px 15px;
-    border-radius: 25px;
+    border-radius: 20px;
+    text-decoration: none;
     font-size: 14px;
+    font-weight: 600;
 }
 
-/* Hero Section */
+/* --- Hero Section --- */
 .hero {
-    height: 70vh;
-    background: linear-gradient(rgba(252, 228, 236, 0.6), rgba(252, 228, 236, 0.6)), url('https://images.unsplash.com/photo-1549465220-1d8c9d9c4709?q=80&w=2070&auto=format&fit=crop');
+    height: 60vh;
+    background: linear-gradient(rgba(252, 228, 236, 0.7), rgba(252, 228, 236, 0.7)), 
+                url('https://images.unsplash.com/photo-1549465220-1d8c9d9c4709?q=80&w=2070');
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 20px;
 }
 
-.hero-text h1 { font-size: 42px; color: #5d4037; margin-bottom: 15px; }
+.hero-text h1 { font-size: 32px; color: #5d4037; margin-bottom: 10px; }
+.hero-text p { font-size: 16px; margin-bottom: 20px; }
 
 .btn-primary {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 35px;
+    padding: 12px 30px;
     background: var(--gold);
     color: white;
     text-decoration: none;
     border-radius: 30px;
-    transition: 0.3s;
 }
 
-/* Product Section */
-.container { padding: 60px 10%; }
-
-.title { text-align: center; margin-bottom: 40px; font-size: 32px; color: #5d4037; }
+/* --- Products --- */
+.container { padding: 40px 5%; }
+.title { text-align: center; margin-bottom: 30px; }
 
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    gap: 20px;
 }
 
 .card {
     background: white;
-    border-radius: 20px;
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     transition: 0.3s;
-    position: relative;
-    border: 1px solid #f9f0f2;
 }
 
-.card:hover { transform: translateY(-10px); }
-
-.prod-img { width: 100%; height: 280px; object-fit: cover; }
-
-.badge {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background: #ff4757;
-    color: white;
-    padding: 5px 12px;
-    border-radius: 5px;
-    font-size: 12px;
-}
-
-.card-info { padding: 20px; }
-
-.price { font-size: 20px; color: var(--gold); font-weight: bold; margin: 10px 0; }
+.prod-img { width: 100%; height: 250px; object-fit: cover; }
+.card-info { padding: 15px; text-align: center; }
+.price { font-size: 18px; color: var(--gold); font-weight: bold; }
 
 .order-btn {
     width: 100%;
     padding: 10px;
+    margin-top: 10px;
     border: none;
     background: var(--pastel-pink);
-    color: #880e4f;
     border-radius: 10px;
-    font-weight: 600;
     cursor: pointer;
-    transition: 0.3s;
+    font-weight: bold;
 }
 
-.order-btn:hover { background: #f8bbd0; }
-
-/* Footer */
-footer {
-    background: #fdf2f5;
-    padding: 50px 10%;
-    text-align: center;
-    border-top: 1px solid #fce4ec;
+@media (max-width: 600px) {
+    .brand-text { font-size: 18px; }
+    .wa-text { display: none; } 
+    .wa-btn { padding: 8px 12px; }
+    
+    .hero-text h1 { font-size: 24px; }
+    .hero-text p { font-size: 14px; }
+    
+    .grid { grid-template-columns: 1fr; }
 }
 
-.social-icons { margin-top: 20px; }
-
-.social-icons a {
-    text-decoration: none;
-    color: var(--gold);
-    margin: 0 15px;
-    font-weight: 500;
-}
+footer { padding: 30px; text-align: center; background: #fdf2f5; }
+.social-icons a { margin: 0 10px; color: var(--gold); text-decoration: none; }
